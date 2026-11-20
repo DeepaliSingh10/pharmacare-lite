@@ -1,0 +1,21 @@
+{
+  "name": "pharma-simple",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple MERN Pharmaceutical Management System - Roll 10, PCCCS594",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c cyan,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run build && npm run start -w server",
+    "seed": "npm run seed -w server",
+    "db:show": "npm run db:show -w server",
+    "db:shell": "npm run db:shell -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

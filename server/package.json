@@ -1,0 +1,21 @@
+{
+  "name": "pharma-simple-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed.js",
+    "db:show": "node src/db-show.js",
+    "db:shell": "node src/db-shell.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb-memory-server": "^9.4.0",
+    "mongoose": "^8.5.1"
+  }
+}
